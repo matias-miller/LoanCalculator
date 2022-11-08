@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoanCalculator.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Loan Interest Calculator" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Padding="30" MinimumWidthRequest="80">
+            <Entry x:Name="loanAmount" Placeholder="Enter loan amount" Keyboard="Numeric"/>
+            <Entry x:Name="interestRate" Placeholder="Enter loan interest rate (must be a positive number)"/>
+            <Entry x:Name="loanPeriod" Placeholder="Enter loan interest period in months" Keyboard="Numeric"/>
+            <Button x:Name="calculateButton" Text="Caclculate Interest Rate!" Clicked="caclculateButton_Clicked"></Button>
+            <Button x:Name="clearButton" Text="Clear All Entries" Clicked="clearButton_Clicked"></Button>
+            <Label x:Name="finalLoanInfo" FontSize="30" Text="" IsVisible="False"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
